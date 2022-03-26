@@ -48,6 +48,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
+
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="61dp"
         android:layout_height="52dp"
@@ -67,7 +69,7 @@
             android:background="@android:color/white"
             android:text="1"
             android:textSize="20dp"
-            android:inputType="text" />
+            android:inputType="number" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -86,7 +88,7 @@
             android:layout_height="wrap_content"
             android:background="@android:color/white"
             android:gravity="center"
-            android:inputType="text"
+            android:inputType="number"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:text="01"
@@ -94,6 +96,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout2"
         android:layout_width="61dp"
         android:layout_height="52dp"
         android:layout_marginTop="236dp"
@@ -109,7 +112,7 @@
             android:layout_height="wrap_content"
             android:background="@android:color/white"
             android:gravity="center"
-            android:inputType="text"
+            android:inputType="number"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:text="00"
@@ -132,7 +135,7 @@
             android:layout_height="wrap_content"
             android:background="@android:color/white"
             android:gravity="center"
-            android:inputType="text"
+            android:inputType="number"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:text="01"
@@ -140,6 +143,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
         android:layout_width="61dp"
         android:layout_height="52dp"
         android:layout_marginTop="360dp"
@@ -155,12 +159,36 @@
             android:layout_height="wrap_content"
             android:background="@android:color/white"
             android:gravity="center"
-            android:inputType="text"
+            android:inputType="number"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:text="00"
             android:textSize="20dp" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/workColon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="245dp"
+        android:text=":"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/restColon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="370dp"
+        android:text=":"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
