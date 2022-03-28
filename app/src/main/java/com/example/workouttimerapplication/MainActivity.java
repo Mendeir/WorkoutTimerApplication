@@ -1,21 +1,23 @@
 package com.example.workouttimerapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.CountDownTimer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-
 import java.util.Locale;
 import java.util.Objects;
-
 import com.google.android.material.textfield.TextInputEditText;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
+    private Button about_bnt;
     private final long workTimeLeftInMillisReset = 0;
     private final long restTimeLeftInMillisReset = 0;
     private long workTimeLeftInMillis = 0;
@@ -48,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
 
     private CountDownTimer workCountDownTimer;
     private CountDownTimer restCountDownTimer;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -227,5 +228,20 @@ public class MainActivity extends AppCompatActivity {
         workTimeLeftInMillis = (workMin * 60000L) + (workSec * 1000L);
         restTimeLeftInMillis = (restMin * 60000L) + (restSec * 1000L);
         buttonStartPause.setVisibility(View.VISIBLE);
+
+        about_bnt = findViewById(R.id.aboutButton);
+        about_bnt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                aboutActivity();
+            }
+        });
+
     }
+
+    public void aboutActivity(){
+        Intent intent = new Intent(this,About.class);
+        startActivity(intent);
+    }
+
 }

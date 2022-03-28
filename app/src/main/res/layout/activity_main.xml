@@ -2,9 +2,19 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/aboutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="596dp"
+        android:text="About us"
 
     //Set Text
 
@@ -60,6 +70,8 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
+
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout2"
         android:layout_width="61dp"
@@ -106,7 +118,7 @@
             android:layout_height="wrap_content"
             android:background="@android:color/white"
             android:gravity="center"
-            android:inputType="text"
+            android:inputType="number"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:text="01"
@@ -132,7 +144,7 @@
             android:layout_height="wrap_content"
             android:background="@android:color/white"
             android:gravity="center"
-            android:inputType="text"
+            android:inputType="number"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:text="00"
@@ -157,7 +169,7 @@
             android:layout_height="wrap_content"
             android:background="@android:color/white"
             android:gravity="center"
-            android:inputType="text"
+            android:inputType="number"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:text="00"
@@ -165,6 +177,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
         android:layout_width="61dp"
         android:layout_height="52dp"
         android:layout_marginTop="392dp"
@@ -182,7 +195,7 @@
             android:layout_height="wrap_content"
             android:background="@android:color/white"
             android:gravity="center"
-            android:inputType="text"
+            android:inputType="number"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:text="01"
@@ -314,7 +327,27 @@
             android:visibility="invisible"
             tools:visibility="visible" />
     </FrameLayout>
+        android:id="@+id/workColon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="245dp"
+        android:text=":"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/restColon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="370dp"
+        android:text=":"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
 
-
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
