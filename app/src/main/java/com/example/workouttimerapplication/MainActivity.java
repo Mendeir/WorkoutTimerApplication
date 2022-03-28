@@ -69,6 +69,8 @@ public class MainActivity extends AppCompatActivity {
         buttonReset = findViewById(R.id.button_reset);
         buttonSetTimer = findViewById(R.id.button_set);
 
+        about_bnt = findViewById(R.id.aboutButton);
+
         buttonSetTimer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -80,6 +82,13 @@ public class MainActivity extends AppCompatActivity {
                 workTimeLeftInMillis = (workMin * 60000L) + (workSec * 1000L);
                 restTimeLeftInMillis = (restMin * 60000L) + (restSec * 1000L);
                 buttonSetTimer.setVisibility(View.INVISIBLE);
+            }
+        });
+
+        about_bnt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                aboutActivity();
             }
         });
 
@@ -228,14 +237,6 @@ public class MainActivity extends AppCompatActivity {
         workTimeLeftInMillis = (workMin * 60000L) + (workSec * 1000L);
         restTimeLeftInMillis = (restMin * 60000L) + (restSec * 1000L);
         buttonStartPause.setVisibility(View.VISIBLE);
-
-        about_bnt = findViewById(R.id.aboutButton);
-        about_bnt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                aboutActivity();
-            }
-        });
 
     }
 
